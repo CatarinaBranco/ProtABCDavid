@@ -1,0 +1,81 @@
+Model selection with abc - cross validation - based on 10 samples
+Confusion matrix based on 10 samples for each model.
+
+$tol0.01
+         Blosum62 Fitness Neutral
+Blosum62        7       1       2
+Fitness         4       4       2
+Neutral         0       0      10
+
+
+Mean model posterior probabilities (rejection)
+
+$tol0.01
+         Blosum62 Fitness Neutral
+Blosum62   0.6007  0.1993  0.2000
+Fitness    0.3989  0.3687  0.2324
+Neutral    0.1992  0.1661  0.6347
+
+
+
+
+Model selection with abc - Real data
+Call: 
+postpr(target = FullRealmatrix, index = ModelsVector, sumstat = FullSSmatrix, 
+    tol = ABC_Tolerance, method = ABC_Method)
+Data:
+ postpr.out$values (3 posterior samples)
+Models a priori:
+ Blosum62, Fitness, Neutral
+Models a posteriori:
+ Blosum62, Fitness, Neutral
+
+Proportion of accepted simulations (rejection):
+Blosum62  Fitness  Neutral 
+  0.0000   0.6667   0.3333 
+
+Bayes factors:
+         Blosum62 Fitness Neutral
+Blosum62              0.0     0.0
+Fitness       Inf     1.0     2.0
+Neutral       Inf     0.5     1.0
+
+
+
+
+
+Goodness of fit of Real data
+
+   -Blosum62:
+$pvalue
+[1] 0.3
+
+$s.dist.sim
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  2.917   3.020   3.180   4.916   4.561  11.598 
+
+$dist.obs
+[1] 3.73673
+
+   -Fitness:
+$pvalue
+[1] 0.8
+
+$s.dist.sim
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  3.005   3.450   3.896   3.865   4.162   5.078 
+
+$dist.obs
+[1] 3.234017
+
+   -Neutral:
+$pvalue
+[1] 0.4
+
+$s.dist.sim
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  3.317   3.467   3.897   4.057   4.529   5.268 
+
+$dist.obs
+[1] 4.280432
+
